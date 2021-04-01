@@ -1,0 +1,15 @@
+public class Hegymaszas {
+
+    static int maszas(int[] poziciok) {
+        int osszMaszas = Math.max(poziciok[0], 0);
+
+        for (int i = 1; i < poziciok.length; i++) {
+            if (poziciok[i] > poziciok[i-1]) {
+                osszMaszas += poziciok[i] - poziciok[i-1];
+            }
+        }
+
+        return osszMaszas;
+    }
+
+}
